@@ -8,7 +8,6 @@ RUN apt-get install -y git-all
 
 # Download the mongo-hadoop connector library and build it
 RUN git clone https://github.com/mongodb/mongo-hadoop.git
-RUN ls
 RUN cd mongo-hadoop && ./gradlew jar
 
 # Create a file to run as the entrypoint which passes a spark master argument to docker run through
